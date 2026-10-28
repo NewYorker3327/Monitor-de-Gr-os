@@ -1,0 +1,26 @@
+{
+	"BUILD_DIR" : "C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build/GrainMonitor_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste",
+	"CMAKE_SOURCE_DIR" : "C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "MinGW Makefiles",
+	"INCLUDE_DIR" : "C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build/GrainMonitor_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/silo2d_noite.jpg",
+		"C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/silo2d.jpg"
+	],
+	"LOCK_FILE" : "C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build/CMakeFiles/GrainMonitor_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "C:/msys64/ucrt64/share/qt6/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build/CMakeFiles/GrainMonitor_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

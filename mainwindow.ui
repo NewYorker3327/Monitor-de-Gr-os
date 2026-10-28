@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1280</width><height>850</height></rect></property>
+  <property name="windowTitle"><string>Sistema de Monitoramento - Fazenda São Luiz</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainVLayout">
+    <item>
+     <widget class="QTabWidget" name="mainTabWidget">
+      <property name="currentIndex"><number>0</number></property>
+      
+      <widget class="QWidget" name="termometriaTab">
+       <attribute name="title"><string>Termometria</string></attribute>
+       <layout class="QHBoxLayout" name="hLayout">
+        
+        <item>
+         <layout class="QVBoxLayout" name="leftSidebarLayout">
+          <item><layout class="QHBoxLayout"><item><widget class="QLabel" name="lblSiloSelection"><property name="text"><string>Seleção de Silos</string></property><property name="styleSheet"><string>font-weight: bold;</string></property></widget></item><item><widget class="QPushButton" name="btnToggleLeftSidebar"><property name="text"><string>&lt;</string></property><property name="maximumWidth"><number>30</number></property></widget></item></layout></item>
+          <item><widget class="QListWidget" name="siloList"><property name="maximumWidth"><number>250</number></property></widget></item>
+          
+          <item>
+           <widget class="QGroupBox" name="grpVisaoGeral">
+            <property name="title"><string>Visão Geral</string></property>
+            <property name="checkable"><bool>true</bool></property>
+            <property name="checked"><bool>true</bool></property>
+            <property name="maximumWidth"><number>250</number></property>
+            <layout class="QVBoxLayout">
+             <item><widget class="QLabel" name="lblMediaP1"><property name="text"><string>Pêndulo 1: -- °C</string></property></widget></item>
+             <item><widget class="QLabel" name="lblMediaP2"><property name="text"><string>Pêndulo 2: -- °C</string></property></widget></item>
+             <item><widget class="QLabel" name="lblMediaP3"><property name="text"><string>Pêndulo 3: -- °C</string></property></widget></item>
+             <item><widget class="QLabel" name="lblMediaP4"><property name="text"><string>Pêndulo 4: -- °C</string></property></widget></item>
+             <item><widget class="QLabel" name="lblMediaP5"><property name="text"><string>Pêndulo 5: -- °C</string></property></widget></item>
+             <item><widget class="QLabel" name="lblMediaGeral"><property name="text"><string>MÉDIA GERAL: -- °C</string></property><property name="styleSheet"><string>font-weight: bold; margin-top: 10px;</string></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+          
+          <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item> 
+         </layout>
+        </item>
+        
+        <item><layout class="QVBoxLayout" name="centerLayout"><item><widget class="QLabel" name="lblCurrentSilo"><property name="text"><string>Silo Alpha</string></property><property name="styleSheet"><string>font-size: 22px; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item><item><widget class="QStackedWidget" name="viewStackedWidget"><property name="currentIndex"><number>0</number></property><widget class="QWidget" name="pageGrid"><layout class="QVBoxLayout"><item><widget class="QScrollArea" name="scrollArea"><property name="widgetResizable"><bool>true</bool></property><widget class="QWidget" name="scrollAreaWidgetContents"><layout class="QGridLayout" name="sensorGridLayout"/></widget></widget></item></layout></widget><widget class="QWidget" name="page2D"><layout class="QVBoxLayout"><item><widget class="QLabel" name="lbl2D"><property name="text"><string>Visualização 2D</string></property></widget></item></layout></widget><widget class="QWidget" name="page3D"><layout class="QVBoxLayout"><item><widget class="QLabel" name="lbl3D"><property name="text"><string>Visualização 3D</string></property></widget></item></layout></widget></widget></item><item><layout class="QHBoxLayout" name="bottomBarLayout"><item><widget class="QLabel" name="lblViewSelector"><property name="text"><string>Seletor de Visualizações</string></property><property name="styleSheet"><string>font-weight: bold;</string></property></widget></item><item><widget class="QPushButton" name="btnToggleBottomBar"><property name="text"><string>v</string></property><property name="maximumWidth"><number>30</number></property></widget></item><item><widget class="QTabBar" name="viewTabBar"/></item><item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item></layout></item>
+        
+        <item>
+         <layout class="QVBoxLayout" name="rightSidebarLayout">
+          <item><layout class="QHBoxLayout"><item><widget class="QPushButton" name="btnToggleRightSidebar"><property name="text"><string>&gt;</string></property><property name="maximumWidth"><number>30</number></property></widget></item><item><widget class="QLabel" name="lblOptions"><property name="text"><string>Opções</string></property><property name="styleSheet"><string>font-weight: bold;</string></property></widget></item></layout></item>
+          <item>
+           <widget class="QWidget" name="optionsPanel">
+            <property name="maximumWidth"><number>250</number></property>
+            <layout class="QVBoxLayout">
+             <item><widget class="QToolBox" name="toolBoxOptions"/></item>
+            </layout>
+           </widget>
+          </item>
+          <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item> 
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="aeracaoTab">
+       <attribute name="title"><string>Aeração</string></attribute>
+       <layout class="QHBoxLayout" name="aeracaoHLayout">
+        <item>
+         <layout class="QVBoxLayout">
+          <item><layout class="QHBoxLayout"><item><widget class="QLabel" name="lblAeracaoSiloSelection"><property name="text"><string>Seleção de Motores</string></property><property name="styleSheet"><string>font-size: 16px; font-weight: bold;</string></property></widget></item><item><widget class="QPushButton" name="btnToggleAeracaoLeftSidebar"><property name="text"><string>&lt;</string></property><property name="maximumWidth"><number>30</number></property></widget></item></layout></item>
+          <item><widget class="QListWidget" name="aeracaoSiloList"><property name="maximumWidth"><number>250</number></property></widget></item>
+          <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item> </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout">
+          <item><widget class="QLabel" name="lblAeracaoCurrentSilo"><property name="text"><string>Painel de Controle de Motores</string></property><property name="styleSheet"><string>font-size: 22px; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+          <item>
+           <widget class="QScrollArea" name="aeracaoScrollArea">
+            <property name="widgetResizable"><bool>true</bool></property>
+            <widget class="QWidget" name="aeracaoScrollContents">
+             <layout class="QGridLayout" name="aeracaoGridLayout">
+              <item row="0" column="0"><widget class="QFrame" name="motorFrame_1"><property name="frameShape"><enum>QFrame::StyledPanel</enum></property><layout class="QVBoxLayout">
+               <item><widget class="QLabel" name="lblMotorTitle_1"><property name="text"><string>Motor Alpha</string></property><property name="styleSheet"><string>font-size: 18px; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QLabel" name="lblMotorStatus_1"><property name="text"><string>STATUS DO MOTOR: DESLIGADO</string></property><property name="styleSheet"><string>font-size: 14px; font-weight: bold; padding: 10px; border: 2px solid gray; border-radius: 8px;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QLabel" name="lblCurrentActiveConfig_1"><property name="styleSheet"><string>color: #2A82DA; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QWidget" name="configContainerWidget_1"><layout class="QVBoxLayout"><item><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Modo:</string></property></widget></item><item><widget class="QComboBox" name="cbOperationMode_1"><item><property name="text"><string>Automático</string></property></item><item><property name="text"><string>Manual</string></property></item></widget></item></layout></item>
+               <item><widget class="QWidget" name="widgetAutoConfig_1"><layout class="QVBoxLayout"><item><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Gatilho:</string></property></widget></item><item><widget class="QComboBox" name="cbAeracaoMode_1"><item><property name="text"><string>Por Horário</string></property></item><item><property name="text"><string>Por Temperatura</string></property></item></widget></item></layout></item>
+               <item><widget class="QWidget" name="wAutoTemp_1"><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Temp Máx (°C):</string></property></widget></item><item><widget class="QDoubleSpinBox" name="spinBoxMaxTemp_1"><property name="value"><number>35.0</number></property></widget></item></layout></widget></item>
+               <item><widget class="QWidget" name="wAutoTime_1"><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Ligar:</string></property></widget></item><item><widget class="QTimeEdit" name="timeEditOn_1"><property name="displayFormat"><string>HH:mm</string></property></widget></item><item><widget class="QLabel"><property name="text"><string>Desligar:</string></property></widget></item><item><widget class="QTimeEdit" name="timeEditOff_1"><property name="displayFormat"><string>HH:mm</string></property></widget></item></layout></widget></item></layout></widget></item>
+               <item><widget class="QWidget" name="widgetManualConfig_1"><layout class="QVBoxLayout"><item><widget class="QPushButton" name="btnManualAction_1"><property name="text"><string>LIGAR MOTOR IMEDIATAMENTE</string></property><property name="minimumHeight"><number>40</number></property><property name="styleSheet"><string>font-size: 14px; font-weight: bold; background-color: #2e7d32; color: white;</string></property></widget></item></layout></widget></item></layout></widget></item><item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+              </layout></widget></item>
+              
+              <item row="0" column="1"><widget class="QFrame" name="motorFrame_2"><property name="frameShape"><enum>QFrame::StyledPanel</enum></property><layout class="QVBoxLayout">
+               <item><widget class="QLabel" name="lblMotorTitle_2"><property name="text"><string>Motor Beta</string></property><property name="styleSheet"><string>font-size: 18px; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QLabel" name="lblMotorStatus_2"><property name="text"><string>STATUS DO MOTOR: DESLIGADO</string></property><property name="styleSheet"><string>font-size: 14px; font-weight: bold; padding: 10px; border: 2px solid gray; border-radius: 8px;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QLabel" name="lblCurrentActiveConfig_2"><property name="styleSheet"><string>color: #2A82DA; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QWidget" name="configContainerWidget_2"><layout class="QVBoxLayout"><item><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Modo:</string></property></widget></item><item><widget class="QComboBox" name="cbOperationMode_2"><item><property name="text"><string>Automático</string></property></item><item><property name="text"><string>Manual</string></property></item></widget></item></layout></item>
+               <item><widget class="QWidget" name="widgetAutoConfig_2"><layout class="QVBoxLayout"><item><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Gatilho:</string></property></widget></item><item><widget class="QComboBox" name="cbAeracaoMode_2"><item><property name="text"><string>Por Horário</string></property></item><item><property name="text"><string>Por Temperatura</string></property></item></widget></item></layout></item>
+               <item><widget class="QWidget" name="wAutoTemp_2"><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Temp Máx (°C):</string></property></widget></item><item><widget class="QDoubleSpinBox" name="spinBoxMaxTemp_2"><property name="value"><number>35.0</number></property></widget></item></layout></widget></item>
+               <item><widget class="QWidget" name="wAutoTime_2"><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Ligar:</string></property></widget></item><item><widget class="QTimeEdit" name="timeEditOn_2"><property name="displayFormat"><string>HH:mm</string></property></widget></item><item><widget class="QLabel"><property name="text"><string>Desligar:</string></property></widget></item><item><widget class="QTimeEdit" name="timeEditOff_2"><property name="displayFormat"><string>HH:mm</string></property></widget></item></layout></widget></item></layout></widget></item>
+               <item><widget class="QWidget" name="widgetManualConfig_2"><layout class="QVBoxLayout"><item><widget class="QPushButton" name="btnManualAction_2"><property name="text"><string>LIGAR MOTOR IMEDIATAMENTE</string></property><property name="minimumHeight"><number>40</number></property><property name="styleSheet"><string>font-size: 14px; font-weight: bold; background-color: #2e7d32; color: white;</string></property></widget></item></layout></widget></item></layout></widget></item><item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+              </layout></widget></item>
+
+              <item row="1" column="0"><widget class="QFrame" name="motorFrame_3"><property name="frameShape"><enum>QFrame::StyledPanel</enum></property><layout class="QVBoxLayout">
+               <item><widget class="QLabel" name="lblMotorTitle_3"><property name="text"><string>Motor Charlie</string></property><property name="styleSheet"><string>font-size: 18px; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QLabel" name="lblMotorStatus_3"><property name="text"><string>STATUS DO MOTOR: DESLIGADO</string></property><property name="styleSheet"><string>font-size: 14px; font-weight: bold; padding: 10px; border: 2px solid gray; border-radius: 8px;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QLabel" name="lblCurrentActiveConfig_3"><property name="styleSheet"><string>color: #2A82DA; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QWidget" name="configContainerWidget_3"><layout class="QVBoxLayout"><item><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Modo:</string></property></widget></item><item><widget class="QComboBox" name="cbOperationMode_3"><item><property name="text"><string>Automático</string></property></item><item><property name="text"><string>Manual</string></property></item></widget></item></layout></item>
+               <item><widget class="QWidget" name="widgetAutoConfig_3"><layout class="QVBoxLayout"><item><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Gatilho:</string></property></widget></item><item><widget class="QComboBox" name="cbAeracaoMode_3"><item><property name="text"><string>Por Horário</string></property></item><item><property name="text"><string>Por Temperatura</string></property></item></widget></item></layout></item>
+               <item><widget class="QWidget" name="wAutoTemp_3"><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Temp Máx (°C):</string></property></widget></item><item><widget class="QDoubleSpinBox" name="spinBoxMaxTemp_3"><property name="value"><number>35.0</number></property></widget></item></layout></widget></item>
+               <item><widget class="QWidget" name="wAutoTime_3"><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Ligar:</string></property></widget></item><item><widget class="QTimeEdit" name="timeEditOn_3"><property name="displayFormat"><string>HH:mm</string></property></widget></item><item><widget class="QLabel"><property name="text"><string>Desligar:</string></property></widget></item><item><widget class="QTimeEdit" name="timeEditOff_3"><property name="displayFormat"><string>HH:mm</string></property></widget></item></layout></widget></item></layout></widget></item>
+               <item><widget class="QWidget" name="widgetManualConfig_3"><layout class="QVBoxLayout"><item><widget class="QPushButton" name="btnManualAction_3"><property name="text"><string>LIGAR MOTOR IMEDIATAMENTE</string></property><property name="minimumHeight"><number>40</number></property><property name="styleSheet"><string>font-size: 14px; font-weight: bold; background-color: #2e7d32; color: white;</string></property></widget></item></layout></widget></item></layout></widget></item><item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+              </layout></widget></item>
+
+              <item row="1" column="1"><widget class="QFrame" name="motorFrame_4"><property name="frameShape"><enum>QFrame::StyledPanel</enum></property><layout class="QVBoxLayout">
+               <item><widget class="QLabel" name="lblMotorTitle_4"><property name="text"><string>Motor Delta</string></property><property name="styleSheet"><string>font-size: 18px; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QLabel" name="lblMotorStatus_4"><property name="text"><string>STATUS DO MOTOR: DESLIGADO</string></property><property name="styleSheet"><string>font-size: 14px; font-weight: bold; padding: 10px; border: 2px solid gray; border-radius: 8px;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QLabel" name="lblCurrentActiveConfig_4"><property name="styleSheet"><string>color: #2A82DA; font-weight: bold;</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+               <item><widget class="QWidget" name="configContainerWidget_4"><layout class="QVBoxLayout"><item><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Modo:</string></property></widget></item><item><widget class="QComboBox" name="cbOperationMode_4"><item><property name="text"><string>Automático</string></property></item><item><property name="text"><string>Manual</string></property></item></widget></item></layout></item>
+               <item><widget class="QWidget" name="widgetAutoConfig_4"><layout class="QVBoxLayout"><item><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Gatilho:</string></property></widget></item><item><widget class="QComboBox" name="cbAeracaoMode_4"><item><property name="text"><string>Por Horário</string></property></item><item><property name="text"><string>Por Temperatura</string></property></item></widget></item></layout></item>
+               <item><widget class="QWidget" name="wAutoTemp_4"><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Temp Máx (°C):</string></property></widget></item><item><widget class="QDoubleSpinBox" name="spinBoxMaxTemp_4"><property name="value"><number>35.0</number></property></widget></item></layout></widget></item>
+               <item><widget class="QWidget" name="wAutoTime_4"><layout class="QHBoxLayout"><item><widget class="QLabel"><property name="text"><string>Ligar:</string></property></widget></item><item><widget class="QTimeEdit" name="timeEditOn_4"><property name="displayFormat"><string>HH:mm</string></property></widget></item><item><widget class="QLabel"><property name="text"><string>Desligar:</string></property></widget></item><item><widget class="QTimeEdit" name="timeEditOff_4"><property name="displayFormat"><string>HH:mm</string></property></widget></item></layout></widget></item></layout></widget></item>
+               <item><widget class="QWidget" name="widgetManualConfig_4"><layout class="QVBoxLayout"><item><widget class="QPushButton" name="btnManualAction_4"><property name="text"><string>LIGAR MOTOR IMEDIATAMENTE</string></property><property name="minimumHeight"><number>40</number></property><property name="styleSheet"><string>font-size: 14px; font-weight: bold; background-color: #2e7d32; color: white;</string></property></widget></item></layout></widget></item></layout></widget></item><item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+              </layout></widget></item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          
+          <item>
+           <layout class="QHBoxLayout" name="aeracaoBottomBarLayout">
+            <item><widget class="QLabel" name="lblAeracaoViewSelector"><property name="text"><string>Modo de Visualização</string></property><property name="styleSheet"><string>font-weight: bold;</string></property></widget></item>
+            <item><widget class="QPushButton" name="btnToggleAeracaoBottomBar"><property name="text"><string>v</string></property><property name="maximumWidth"><number>30</number></property></widget></item>
+            <item><widget class="QTabBar" name="aeracaoViewTabBar"/></item>
+            <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+
+        <item>
+         <layout class="QVBoxLayout">
+          <item><layout class="QHBoxLayout"><item><widget class="QPushButton" name="btnToggleAeracaoRightSidebar"><property name="text"><string>&gt;</string></property><property name="maximumWidth"><number>30</number></property></widget></item><item><widget class="QLabel"><property name="text"><string>Opções</string></property><property name="styleSheet"><string>font-weight: bold;</string></property></widget></item></layout></item>
+          <item><widget class="QWidget" name="aeracaoOptionsPanel"><property name="maximumWidth"><number>200</number></property><layout class="QVBoxLayout"><item><widget class="QPushButton" name="btnLockUnlockConfig"><property name="text"><string>Destravar Configurações</string></property><property name="minimumHeight"><number>40</number></property></widget></item><item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item></layout></widget></item>
+          <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item> </layout>
+        </item>
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="meteorologiaTab">
+       <attribute name="title"><string>Meteorologia</string></attribute>
+       <layout class="QVBoxLayout"><item><widget class="QLabel"><property name="text"><string>Módulo de Meteorologia em desenvolvimento...</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item></layout>
+      </widget>
+
+      <widget class="QWidget" name="redeTab">
+       <attribute name="title"><string>Rede</string></attribute>
+       <layout class="QVBoxLayout"><item><widget class="QLabel"><property name="text"><string>Módulo de Rede em desenvolvimento...</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item></layout>
+      </widget>
+
+      <widget class="QWidget" name="estatisticasTab">
+       <attribute name="title"><string>Estatísticas</string></attribute>
+       <layout class="QVBoxLayout"><item><widget class="QLabel"><property name="text"><string>Módulo de Estatísticas em desenvolvimento...</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item></layout>
+      </widget>
+
+      <widget class="QWidget" name="configTab">
+       <attribute name="title"><string>Configurações</string></attribute>
+       <layout class="QVBoxLayout"><item><widget class="QComboBox" name="themeComboBox"/></item><item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item></layout>
+      </widget>
+      
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+</ui>

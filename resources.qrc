@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>silo2d.jpg</file>
+        <file>silo2d_noite.jpg</file>
+    </qresource>
+</RCC>

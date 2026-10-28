@@ -1,0 +1,5 @@
+C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build/CMakeFiles/GrainMonitor.dir
+C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build/CMakeFiles/edit_cache.dir
+C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build/CMakeFiles/rebuild_cache.dir
+C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build/CMakeFiles/GrainMonitor_autogen_timestamp_deps.dir
+C:/Users/joao.vilarino/Desktop/PhiBras_teste/Termometria Teste/build/CMakeFiles/GrainMonitor_autogen.dir
